@@ -17,6 +17,5 @@ jobs:
         run: |
           df -h
           sudo apt remove dotnet* -y
-          sudo apt remove haskell-platform -y
-          sudo apt remove android-sdk* -y
+          dpkg-query -W -f='${Installed-Size;8}  ${Package}\n' | sort -n
           df -h
