@@ -12,13 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           df -h
           sudo apt remove dotnet* -y
+          sudo apt remove haskell-platform -y
+          sudo apt remove android-sdk* -y
           df -h
